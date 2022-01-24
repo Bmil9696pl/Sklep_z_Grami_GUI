@@ -10,9 +10,9 @@ int main(int argc, char *argv[])
         w.show();
         return a.exec();
     }
-    if(operacja == "tablica"){
+    if(operacja == "argument"){
         for (int i = 0; i < 100; i++){
-            cout << "nauraa";
+            cout << "czesc nie mialem pomyslu na obsluge argumentu wiec wyswietla sie ta wiadomosc 100 razy zycze milego dnia ";
         }
     }
 }

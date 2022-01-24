@@ -14,7 +14,7 @@ GryKarcianeOkno::~GryKarcianeOkno()
     delete ui;
 }
 
-// @brief obsługa przycisku
+// @brief obsługa przycisku - dodaje on do koszyka gre karciana (max 30 sztuk)
 void GryKarcianeOkno::on_DodajDoKoszyka_pushButton_clicked()
 {
     Pomocniczy = new GraKarciana;
@@ -42,13 +42,13 @@ void GryKarcianeOkno::on_DodajDoKoszyka_pushButton_clicked()
     }
 }
 
-// @brief obsługa przycisku
+// @brief obsługa przycisku - zamyka okno
 void GryKarcianeOkno::on_Powrot_pushButton_clicked()
 {
     this->close();
 }
 
-// @brief obsługa przycisku
+// @brief obsługa przycisku - wyswietla opis gry
 void GryKarcianeOkno::on_OpisGry_pushButton_clicked()
 {
     int tmp = ui->listWidget->currentRow();

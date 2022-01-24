@@ -6,7 +6,6 @@ GryKomputeroweOkno::GryKomputeroweOkno(QWidget *parent) :
     ui(new Ui::GryKomputeroweOkno)
 {
     ui->setupUi(this);
-    //wczytajVectora();
 }
 
 GryKomputeroweOkno::~GryKomputeroweOkno()
@@ -14,20 +13,20 @@ GryKomputeroweOkno::~GryKomputeroweOkno()
     delete ui;
 }
 
-// @brief obsługa przycisku
+// @brief obsługa przycisku - dodaje gre komputerowa do koszyka
 void GryKomputeroweOkno::on_DodajDoKoszyka_pushButton_clicked()
 {
     int tmp = ui->listWidget->currentRow();
     koszyk->dodajProdukt(&polkaKomputerowe.at(tmp));
 }
 
-// @brief obsługa przycisku
+// @brief obsługa przycisku - zamyka okno
 void GryKomputeroweOkno::on_Powrot_pushButton_clicked()
 {
     this->close();
 }
 
-// @brief obsługa przycisku
+// @brief obsługa przycisku - wyswietla opis gry
 void GryKomputeroweOkno::on_WyswietlOpis_pushButton_clicked()
 {
     int tmp = ui->listWidget->currentRow();

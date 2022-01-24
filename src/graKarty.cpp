@@ -102,12 +102,12 @@ string GraKarciana::opisGry() {
 }
 
 // @brief operator kopiujący gry karciane
-// @param "a" - obiekt po prawej stronie operatora
-GraKarciana& GraKarciana::operator=(GraKarciana const &a){
-    nazwa = a.nazwa;
-    cena = a.cena;
-    opis = a.opis;
-    nPaczek = a.nPaczek;
-    nKart = a.nKart;
+// @param "rhs" - obiekt po prawej stronie operatora
+GraKarciana& GraKarciana::operator=(GraKarciana const &rhs){
+    nazwa = rhs.nazwa;
+    cena = rhs.cena;
+    opis = rhs.opis;
+    nPaczek = rhs.nPaczek;
+    nKart = rhs.nKart;
     return * this;
 }

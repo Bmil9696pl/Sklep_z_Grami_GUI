@@ -15,13 +15,13 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-// @brief "kupuje" rzeczy z koszyka czyli zapisuje je w pliku
+// @brief obsługa przycisku - "kupuje" rzeczy z koszyka czyli zapisuje je w pliku
 void MainWindow::on_zakup_pushButton_clicked()
 {
     lista.zapisz();
 }
 
-// @brief wyswietla okno z grami kompyterowymi
+// @brief obsługa przycisku - wyswietla okno z grami kompyterowymi
 void MainWindow::on_wyswietlKomputerowe_pushButton_clicked()
 {
     if(KomputeroweZaladowane == 0){
@@ -32,7 +32,7 @@ void MainWindow::on_wyswietlKomputerowe_pushButton_clicked()
     oknoKomputerowe.show();
 }
 
-// @brief wyswietla okno z grami karcianymi
+// @brief obsługa przycisku - wyswietla okno z grami karcianymi
 void MainWindow::on_wyswietlKarciane_pushButton_clicked()
 {
     if(KarcianeZaladowane == 0){
@@ -43,7 +43,7 @@ void MainWindow::on_wyswietlKarciane_pushButton_clicked()
     oknoKarciane.show();
 }
 
-// @brief wyświetla opis zaznaczonej gry
+// @brief obsługa przycisku - wyświetla opis zaznaczonej gry
 void MainWindow::on_wyswietlOpis_pushButton_clicked()
 {
     int tmp = ui->listWidget->currentRow();
@@ -52,6 +52,7 @@ void MainWindow::on_wyswietlOpis_pushButton_clicked()
     QMessageBox::information(this,"opis gry",temp);
 }
 
+// @brief obsluga przycisku - odswierza listę przedmiotów w koszyku
 void MainWindow::on_actionOdswierz_triggered()
 {
     ui->listWidget->clear();
